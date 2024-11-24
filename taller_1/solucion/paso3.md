@@ -9,9 +9,15 @@ aws lambda create-function \
   --handler script.lambda_handler \
   --zip-file fileb://script.zip
 ```
-
-## Resultado
-
+## Les quitamos los bloqueos de acceso pulico al bucket
+```bash
+aws s3api delete-bucket-policy --bucket taller1-bucket
+```
+## Le otorgamos una politica para acceso pulico a los objetos de nuestro bucket
+```bash
+aws s3api put-bucket-policy --bucket taller1-bucket --policy file://bucket-public-policy.json
+```
+https://taller1-bucket.s3.us-east-2.amazonaws.com/test-file.txt
 ```json
 {
   "statusCode": 200,
