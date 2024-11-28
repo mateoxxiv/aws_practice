@@ -1,0 +1,8 @@
+{
+    "LambdaFunctionConfigurations": [
+        {
+            "LambdaFunctionArn": "arn:aws:lambda:us-east-2:575108931787:function:taller3-lambda",
+            "Events": ["s3:ObjectCreated:*"]
+        }
+    ]
+  }
